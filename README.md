@@ -12,3 +12,4 @@
 ## Links
 - Google ADK - [Github](https://github.com/google/adk-python), [Documentation](https://google.github.io/adk-docs/)
 - [kubectl-ai](https://github.com/GoogleCloudPlatform/kubectl-ai/tree/main)
+- Install and configure gh-cli by running `brew install gh` and `gh auth login`
