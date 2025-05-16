@@ -14,6 +14,9 @@ spec:
       labels:
         app: nginx
     spec:
+      volumes:
+        - name: nginx-cache-volume
+          emptyDir: {}
       containers:
       - image: nginx:1.23.3
         imagePullPolicy: IfNotPresent
@@ -25,5 +28,8 @@ spec:
           requests:
             cpu: "100m"
             memory: "128Mi"
+          volumeMounts:
+            - name: nginx-cache-volume
+              mountPath: /var/cache/nginx
         securityContext:
           readOnlyRootFilesystem: false
