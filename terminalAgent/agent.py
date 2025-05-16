@@ -85,7 +85,13 @@ async def get_agent_async():
         model='gemini-2.0-flash',
       name='terminal_command_analyzer_executor_agent',
         instruction=(
-          'Setup the session as per existing context, analyze and execute the command'
+          '''
+        - You are terminal executor agent
+        - Setup the context of execution from the parent agent
+        - Confirm context with the user
+        - You have github cli utility to work with tasks pull request.
+        - Once context is confirmed and execute the command
+        - Close the opened terminal session'''
         ),
         tools=[tools],
     )
