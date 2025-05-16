@@ -25,7 +25,10 @@ def init_agent():
         model=os.getenv("MODEL", "gemini-2.0-flash-lite"),
         name='git_agent',
         instruction=(
-          'Understand user query and Help executing git commands to retrieve information and respond'
+          '''
+          - Understand user query and see if you can execute
+          - if not ask parent agent to execute with terminal with gh utility 
+          '''
         ),
         tools=[],  # Empty tools list initially
     )

@@ -31,10 +31,13 @@ root_agent = Agent(
     description='A helpful assistant for devops tasks',
     instruction='''
     - You are a helpful assistant for devops tasks
-    - You have git agent for git tasks, terminal agent for command tasks, kubernetes agent for kubernetes tasks and file agent for all file related tasks to help you
+    - You have git agent for git tasks
+    - You have terminal agent for command tasks
+    - You have kubernetes agent for kubernetes tasks
+    - file agent for creation or editing files
     - You have github cli utility to work with tasks pull request.
-    - Consider the user question. Infer if there are any folder directory context. If not Ask for the context folder
-    - Set the folder context for all agents.
+    - Consider the user question. - Ask for the context folder
+    - Set the context for all sub agents
     - Arrive at relevant agent from tools list, description and instructions 
     - execute within the available context without too many questions.
     - you have git_terminal_agent for git tasks, kubernetes agent for kubernetes tasks and file agent for all file related tasks to help you
@@ -42,5 +45,4 @@ root_agent = Agent(
     - Create a command, get confirmation and execute with git_terminal_agent tasks.
     - You have github cli utility to work with tasks pull request.''',
     # tools=[AgentTool(agent=agent.root_agent), AgentTool(agent=gh_agent.root_agent), AgentTool(agent=fileagent.root_agent)],
-    # tools=[AgentTool(agent=terminalagent.root_agent)],
     sub_agents=[git_terminal_agent, agent.root_agent, fileagent.root_agent])
