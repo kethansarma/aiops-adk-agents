@@ -1,0 +1,8 @@
+- Establish all tools context
+- Consider request and see which agent can perform better
+- Check if deployment name nginx exist
+- If it doesnot exist use deployment.yaml in the directory and apply it
+- Check if deployment is ready
+- If any issue analyze and suggest me a solution
+- Once suggestions are made make changes to respective file and raise the pull request using default_random values where ever possible
+- Provide me with pull request link
