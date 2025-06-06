@@ -29,4 +29,4 @@ spec:
             cpu: "100m"
             memory: "128Mi"
         securityContext:
-          readOnlyRootFilesystem: false
+          readOnlyRootFilesystem: true
