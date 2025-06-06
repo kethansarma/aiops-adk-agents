@@ -91,7 +91,7 @@ async def get_agent_async():
         - Confirm context with the user
         - You have github cli utility to work with tasks pull request.
         - Once context is confirmed and execute the command
-        - Close the opened terminal session'''
+        - Close the opened terminal session after all parent tasks are done'''
         ),
         tools=[tools],
     )
